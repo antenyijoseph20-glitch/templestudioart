@@ -6,6 +6,9 @@ import (
 )
 
 func renderArt(input string, bannerFile string) (string, error) {
+	if input == "" {
+		return "", nil
+	}
 
 	input = strings.ReplaceAll(input, "\r\n", "\n")
 	input = strings.ReplaceAll(input, "\r", "\n")

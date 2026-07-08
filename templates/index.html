@@ -6,72 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCII Art Web(TEMPESTSTUDIO)</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 40px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 8px rgba(0,0,0,.1);
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 140px;
-            padding: 10px;
-            font-size: 16px;
-            resize: vertical;
-        }
-
-        .banner-group {
-            margin: 20px 0;
-        }
-
-        .banner-group label {
-            margin-right: 20px;
-        }
-
-        button {
-            padding: 10px 25px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .error {
-            margin-top: 20px;
-            color: red;
-            font-weight: bold;
-        }
-
-        .result {
-            margin-top: 30px;
-        }
-
-        pre {
-            background: #eeeeee;
-            padding: 15px;
-            overflow-x: auto;
-            white-space: pre;
-        }
-    </style>
-
+   <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
@@ -147,6 +82,20 @@
         <h2>ASCII Art Result(TEMPESTSTUDIO)</h2>
 
         <pre>{{.Result}}</pre>
+        <form action="/download" method="POST">
+
+<input
+type="hidden"
+name="ascii"
+value="{{.Result}}">
+
+<button>
+
+Download
+
+</button>
+
+</form>
 
     </div>
 
